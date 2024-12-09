@@ -1,13 +1,17 @@
-// /pages/index.js
+import styles from '../styles/Home.module.css';
 
-import styles from "../styles/Home.module.css"; // Import local styles
-
-export default function HomePage() {
+const Home: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.name}>DEREK WOOD</h1>
-      <p className={styles.description}>Welcome to my portfolio!</p>
-      <a href="#contact" className={styles.ctaButton}>Contact Me</a>
+      <div className={styles.overlay}>
+        <h1 className={styles.name}>DEREK WOOD</h1>
+        <a href="#work" className={styles.ctaButton}>
+          <span>Check out my work</span>
+          <span className={styles.arrow}>→</span>
+        </a>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
